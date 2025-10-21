@@ -4,6 +4,7 @@ import ora from "ora";
 import { execSync } from "child_process";
 import fs from "fs"
 import path from "path";
+import { execa } from "execa";
 
 let List = ["Accordion",
     "Alert",
@@ -78,7 +79,7 @@ export async function main() {
     const spinner =ora(`install ${component} from Shadcn` ).start()
 
     try{
-execSync(`npx shadcn@latest add ${component}`,{stdio:"inherit"})
+execa(`npx shadcn@latest add ${component}`,{stdio:"inherit"})
 spinner.succeed(chalk.green("It has been installed successfully"))
 
     }catch{

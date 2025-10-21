@@ -87,7 +87,46 @@ spinner.succeed(chalk.green("It has been installed successfully"))
 
     }
 
-    
+
+    const{filePath}= await inquirer.prompt([
+        {type:"input",name:"filePath",message:"Enter the path of the file you want to add the =>import<= to : ",default:"./src/App.tsx"}
+
+
+    ])
+
+    const resolvePath=path.resolve(filePath)
+
+
+    if(!fs.existsSync(resolvePath)){
+        console.log(chalk.red(`File not found: ${resolvePath}`))
+        return
+    }
+
+
+    let importComponent=`\nimport {}`
+
+    if(component==="Button"){
+        importComponent=`\nimport { Button } from "@/components/ui/button"`
+    }
+
+    let importText=importComponent
+
+    const content =fs.readFileSync(resolvePath,"utf-8")
+
+    if(!content.includes(importText.trim())){
+        const update =importText +"\n"+content
+        fs.writeFileSync(resolvePath,update,"utf-8")
+        console.log(chalk.green(`✅ Import added for ${component} Successfully`))
+
+    }else{
+        console.log(chalk.yellow(`⚠️ import for an existing ${component}.`))
+    }
+
+
+    console.log(chalk.cyanBright("🎉 Everything was successful!"))
+
+
+
 }
 
 main()

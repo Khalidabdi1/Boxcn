@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import chalk from "chalk";
+import chalk, { supportsColor } from "chalk";
 import ora from "ora";
 import { execSync } from "child_process";
 import fs from "fs"
@@ -75,7 +75,19 @@ export async function main() {
         { type: "list", name: "component", message: "add : ", choices: List }
     ])
 
-    const spinner =ora(`install`)
+    const spinner =ora(`install ${component} from Shadcn` ).start()
+
+    try{
+execSync(`npx shadcn@latest add ${component}`,{stdio:"inherit"})
+spinner.succeed(chalk.green("It has been installed successfully"))
+
+    }catch{
+        spinner.fail(chalk.red("Something went wrong"))
+        return
+
+    }
+
+    
 }
 
 main()

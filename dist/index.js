@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.main = main;
 const inquirer_1 = __importDefault(require("inquirer"));
 const chalk_1 = __importDefault(require("chalk"));
+const ora_1 = __importDefault(require("ora"));
 let List = ["Accordion",
     "Alert",
     "Alert Dialog",
@@ -72,5 +73,9 @@ async function main() {
     const { component } = await inquirer_1.default.prompt([
         { type: "list", name: "component", message: "add : ", choices: List }
     ]);
+    const spinner = (0, ora_1.default)(`install ${component} from Shadcn`).start();
+    setTimeout(() => {
+        spinner.stop();
+    }, 3000);
 }
 main();

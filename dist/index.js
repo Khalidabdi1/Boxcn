@@ -293,7 +293,7 @@ async function main() {
         console.log(`Installing ${component}...`);
         //npx shadcn@latest add button
         //خلي احرف صغيره من list
-        (0, child_process_1.execSync)(`npx shadcn@latest add ${component}`, { stdio: 'inherit' });
+        (0, child_process_1.execSync)(`npx shadcn@latest add ${component_name}`, { stdio: 'inherit' });
         spinner.succeed(chalk_1.default.green("It has been installed successfully"));
     }
     catch {
@@ -307,9 +307,6 @@ async function main() {
     if (!fs_1.default.existsSync(resolvePath)) {
         console.log(chalk_1.default.red(`File not found: ${resolvePath}`));
         return;
-    }
-    if (component === "Button") {
-        importComponent = `\nimport { Button } from "@/components/ui/button"`;
     }
     let importText = importComponent;
     const content = fs_1.default.readFileSync(resolvePath, "utf-8");

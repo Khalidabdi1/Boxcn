@@ -251,7 +251,7 @@ export async function main() {
          //خلي احرف صغيره من list
          
 
-  execSync(`npx shadcn@latest add ${component}`, { stdio: 'inherit' });
+  execSync(`npx shadcn@latest add ${component_name}`, { stdio: 'inherit' });
           spinner.succeed(chalk.green("It has been installed successfully"))
 
 
@@ -279,9 +279,7 @@ export async function main() {
 
    
 
-    if (component === "Button") {
-        importComponent = `\nimport { Button } from "@/components/ui/button"`
-    }
+   
 
     let importText = importComponent
 

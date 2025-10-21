@@ -13,12 +13,24 @@ import chalk from "chalk";
 
 const args =process.argv.slice(2)
 
+
+async function start(){
 if(args.length===0){
    console.log("Write: Boxcn search")
 }else if(args[0]==="search"){
-   main()
+   try{
+  await main()
+console.log(chalk.green("============================"))
+   }catch(err){
+      console.log(chalk.red("error"))
+      console.log(err)
+   }
 }else{
-   console.log("error")
+   console.log(chalk.red("❌ Unknown command."))
 }
 
+}
+
+
+start()
 

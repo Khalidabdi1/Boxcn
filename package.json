@@ -1,6 +1,6 @@
 {
   "name": "@khalidabdi/boxcn",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/index.js",
   "types": "dist/index.d.ts",
   "bin": {

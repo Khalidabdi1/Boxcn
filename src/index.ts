@@ -4,7 +4,8 @@ import ora from "ora";
 import { execSync } from "child_process";
 import fs from "fs"
 import path from "path";
-import { execa } from "execa";
+import {execa} from 'execa';
+
 
 let List = ["Accordion",
     "Alert",
@@ -76,50 +77,56 @@ export async function main() {
         { type: "list", name: "component", message: "add : ", choices: List }
     ])
 
-    const spinner =ora(`install ${component} from Shadcn` ).start()
+    const spinner = ora(`install ${component} from Shadcn`).start()
 
-    try{
-await execa("npx",["shadcn@latest","add",component],{stdio:"inherit"})
-spinner.succeed(chalk.green("It has been installed successfully"))
+    try {
 
-    }catch{
+        // await execa('npx', ['shadcn@latest', 'add', component], { stdio: 'inherit', shell: true });
+
+
+         console.log(`Installing ${component}...`);
+  execSync(`npx shadcn@latest add ${component}`, { stdio: 'inherit' });
+          spinner.succeed(chalk.green("It has been installed successfully"))
+
+
+    } catch {
         spinner.fail(chalk.red("Something went wrong"))
         return
 
     }
 
 
-    const{filePath}= await inquirer.prompt([
-        {type:"input",name:"filePath",message:"Enter the path of the file you want to add the =>import<= to : ",default:"./src/App.tsx"}
+    const { filePath } = await inquirer.prompt([
+        { type: "input", name: "filePath", message: "Enter the path of the file you want to add the =>import<= to : ", default: "./src/App.tsx" }
 
 
     ])
 
-    const resolvePath=path.resolve(filePath)
+    const resolvePath = path.resolve(filePath)
 
 
-    if(!fs.existsSync(resolvePath)){
+    if (!fs.existsSync(resolvePath)) {
         console.log(chalk.red(`File not found: ${resolvePath}`))
         return
     }
 
 
-    let importComponent=`\nimport {}`
+    let importComponent = `\nimport {}`
 
-    if(component==="Button"){
-        importComponent=`\nimport { Button } from "@/components/ui/button"`
+    if (component === "Button") {
+        importComponent = `\nimport { Button } from "@/components/ui/button"`
     }
 
-    let importText=importComponent
+    let importText = importComponent
 
-    const content =fs.readFileSync(resolvePath,"utf-8")
+    const content = fs.readFileSync(resolvePath, "utf-8")
 
-    if(!content.includes(importText.trim())){
-        const update =importText +"\n"+content
-        fs.writeFileSync(resolvePath,update,"utf-8")
+    if (!content.includes(importText.trim())) {
+        const update = importText + "\n" + content
+        fs.writeFileSync(resolvePath, update, "utf-8")
         console.log(chalk.green(`✅ Import added for ${component} Successfully`))
 
-    }else{
+    } else {
         console.log(chalk.yellow(`⚠️ import for an existing ${component}.`))
     }
 
@@ -130,4 +137,3 @@ spinner.succeed(chalk.green("It has been installed successfully"))
 
 }
 
-main()

@@ -14,7 +14,7 @@ let List = ["Accordion",
     "Avatar",
     "Badge",
     "Breadcrumb",
-    "Button",
+    "button",
     "Button Group",
     "Calendar",
     "Card",
@@ -86,6 +86,8 @@ export async function main() {
 
          console.log(`Installing ${component}...`);
          //npx shadcn@latest add button
+         //خلي احرف صغيره من list
+         
 
   execSync(`npx shadcn@latest add ${component}`, { stdio: 'inherit' });
           spinner.succeed(chalk.green("It has been installed successfully"))

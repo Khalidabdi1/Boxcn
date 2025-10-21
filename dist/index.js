@@ -75,7 +75,7 @@ async function main() {
     console.clear();
     console.log(chalk_1.default.cyanBright("Boxcn CLI -- add shadcn component"));
     const { component } = await inquirer_1.default.prompt([
-        { type: "list", name: "component", message: "add : ", choices: List }
+        { type: "list", name: "component", message: "Choose the component you want :", choices: List }
     ]);
     let importComponent = `\nimport {}`;
     let component_name = "";

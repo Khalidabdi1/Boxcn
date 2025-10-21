@@ -9,6 +9,21 @@
   "files": [
     "dist"
   ],
+   "keywords": [
+    "boxcn",
+    "shadcn",
+    "cli",
+    "react",
+    "vite",
+    "nextjs",
+    "ui",
+    "components",
+    "frontend",
+    "automation",
+    "developer tools",
+    "command line",
+    "shadcn ui installer"
+  ],
   "scripts": {
     "build": "tsc"
   },
@@ -21,5 +36,18 @@
     "execa": "^9.6.0",
     "inquirer": "^12.10.0",
     "ora": "^9.0.0"
+  },
+    "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Khalidabdi1/Boxcn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Khalidabdi1/Boxcn/issues"
+  },
+  "homepage": "https://github.com/Khalidabdi1/Boxcn#readme",
+   "author": {
+    "name": "Khalid Abdi",
+    "url": "https://github.com/Khalidabdi1"
   }
 }

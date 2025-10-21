@@ -26,4 +26,4 @@ npm install @khalidabdi/boxcn
 
 ```
 
-##
+- Then choose the location of the file where you want to have {import}.

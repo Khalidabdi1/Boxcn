@@ -1,0 +1,25 @@
+{
+  "name": "@khalidabdi/boxcn",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "boxcn": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "undici-types": "^7.16.0"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "execa": "^9.6.0",
+    "inquirer": "^12.10.0",
+    "ora": "^9.0.0"
+  }
+}

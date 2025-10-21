@@ -79,7 +79,7 @@ export async function main() {
     const spinner =ora(`install ${component} from Shadcn` ).start()
 
     try{
-execa(`npx shadcn@latest add ${component}`,{stdio:"inherit"})
+await execa("npx",["shadcn@latest","add",component],{stdio:"inherit"})
 spinner.succeed(chalk.green("It has been installed successfully"))
 
     }catch{

@@ -1,6 +1,6 @@
 {
   "name": "@khalidabdi/boxcn",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "main": "src/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -9,7 +9,7 @@
   "files": [
     "dist"
   ],
-   "keywords": [
+  "keywords": [
     "boxcn",
     "shadcn",
     "cli",
@@ -37,7 +37,7 @@
     "inquirer": "^12.10.0",
     "ora": "^9.0.0"
   },
-    "license": "MIT",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Khalidabdi1/Boxcn.git"
@@ -46,7 +46,7 @@
     "url": "https://github.com/Khalidabdi1/Boxcn/issues"
   },
   "homepage": "https://github.com/Khalidabdi1/Boxcn#readme",
-   "author": {
+  "author": {
     "name": "Khalid Abdi",
     "url": "https://github.com/Khalidabdi1"
   }

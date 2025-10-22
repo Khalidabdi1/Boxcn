@@ -301,3 +301,12 @@ export async function main() {
 
 }
 
+
+export async function Edit() {
+    console.clear()
+
+    let {edit}=await inquirer.prompt([{
+        type:"list",name:"edit",choices:List,message:"Choose the component you want to put in file"
+    }])
+}
+

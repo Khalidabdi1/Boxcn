@@ -100,7 +100,7 @@ Pull requests, issues, and feature suggestions are always welcome 💡
 
 ## 🔍 SEO Keywords
 
-`shadcn ui`, `cli`, `boxcn`, `react components`, `vite`, `nextjs`, `ui automation`, `frontend tools`, `component installer`, `developer productivity`, `khalid abdi`
+`shadcn ui`, `cli`, `boxcn`, `react components`, `vite`, `nextjs`, `ui automation`, `frontend tools`, `component installer`, `developer productivity`
 
 ---
 

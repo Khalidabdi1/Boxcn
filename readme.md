@@ -45,27 +45,18 @@ npm install @khalidabdi/boxcn
 
 ## 💡 Usage
 
-### Add a Shadcn Component
-
-```bash
-Boxcn add
-```
-
-This will open an interactive CLI where you can select any Shadcn component.
-Boxcn will then:
-
-* Install it using `npx shadcn@latest add`
-* Automatically insert the correct import statement into your target React file
-
----
 
 ### Search for Components
 
 ```bash
 Boxcn search
 ```
+-This will open an interactive CLI where you can select any Shadcn component.
+Boxcn will then:
 
-Quickly find and add Shadcn components from the CLI without browsing documentation.
+* Quickly find and add Shadcn components from the CLI without browsing documentation.
+* Install it using `npx shadcn@latest add`
+* Automatically insert the correct import statement into your target React file
 
 ---
 

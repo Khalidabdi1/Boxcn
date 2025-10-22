@@ -1,7 +1,7 @@
 
 
 
-````md
+
 # 📦 Boxcn CLI — Smart Shadcn/UI Component Installer
 
 ![Boxcn CLI Example](https://github.com/Khalidabdi1/Boxcn/blob/main/photo/example.png)

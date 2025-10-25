@@ -66,13 +66,13 @@ Now you can **automatically insert your selected [Shadcn/UI](https://ui.shadcn.c
 
 Just place a small comment marker in your file:
 
-```tsx
+
 {/**after*/}
 Then run the command below 👇
 
-bash
-نسخ الكود
+```bash
 Boxcn edit
+```
 Boxcn will:
 
 Prompt you to select a Shadcn component (e.g., Button, Card, Accordion, etc.)

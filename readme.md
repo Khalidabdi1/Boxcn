@@ -1,17 +1,13 @@
-
-
-
-
-# 📦 Boxcn CLI — Smart Shadcn/UI Component Installer
+# 📦 Boxcn CLI — Smart Shadcn/UI Component Installer for React, Vite & Next.js
 
 ![Boxcn CLI Example](https://github.com/Khalidabdi1/Boxcn/blob/main/photo/example.png)
 
-**Boxcn CLI** is a smart, developer-friendly **command-line tool** that helps you easily install and import [**Shadcn/UI**](https://ui.shadcn.com) components into your React, Vite, or Next.js project.
+**Boxcn CLI** is a smart and developer-friendly **command-line tool** that helps you easily install and import [**Shadcn/UI**](https://ui.shadcn.com) components into your React, Vite, or Next.js projects.
 
-With one simple command, Boxcn handles:
-- Installing your chosen Shadcn component  
-- Automatically adding the correct `import` statement into your file  
-- Saving you time, effort, and endless typing ✨
+With one simple command, **Boxcn** automatically:
+- Installs your selected Shadcn component  
+- Adds the correct `import` statements into your React file  
+- Saves you time, effort, and endless manual setup ✨
 
 ---
 
@@ -19,73 +15,69 @@ With one simple command, Boxcn handles:
 
 - ⚡ **Fast & Simple** — Install Shadcn components in seconds.  
 - 🧩 **Smart Imports** — Automatically injects imports into your React files.  
-- 🎨 **Interactive CLI** — Beautiful, user-friendly terminal interface.  
+- 🎨 **Interactive CLI** — Clean, user-friendly terminal experience.  
 - 🔧 **Fully Compatible** — Works with Vite, Next.js, and CRA projects.  
-- 🪄 **Automation Ready** — Perfect for large-scale projects and UI consistency.
+- 🪄 **Automation Ready** — Great for large-scale projects and UI consistency.
 
 ---
 
 ## 🛠️ Installation
 
-Before installing, make sure you have [**Shadcn/UI**](https://ui.shadcn.com/docs/installation) set up in your project.
+Before using Boxcn, make sure you have [**Shadcn/UI**](https://ui.shadcn.com/docs/installation) installed in your project.
 
-### Global Installation
+### 🌍 Global Installation
 
 ```bash
 npm install -g @khalidabdi/boxcn
-````
-
-### Local Installation
-
+```
+📦 Local Installation
 ```bash
 npm install @khalidabdi/boxcn
 ```
 
----
-
-## 💡 Usage
-
-
-### Search for Components
-
+💡 Usage
+🔍 Search for Components
 ```bash
+
 Boxcn search
 ```
--This will open an interactive CLI where you can select any Shadcn component.
+This opens an interactive CLI that allows you to select any Shadcn/UI component.
 Boxcn will then:
 
-* Quickly find and add Shadcn components from the CLI without browsing documentation.
-* Install it using `npx shadcn@latest add`
-* Automatically insert the correct import statement into your target React file
+Find and install the selected component using npx shadcn@latest add
 
----
+Automatically add the correct import statement to your target React file
 
-## ✨ New Feature — `Boxcn edit`
+No need to browse documentation — everything happens in seconds ⚡
 
-Now you can **automatically insert your selected [Shadcn/UI](https://ui.shadcn.com) component element** directly inside your React file — exactly where you want it!
+✨ New Command — Boxcn edit
+You can now automatically insert a selected Shadcn/UI component directly inside your React file.
 
-Just place a small comment marker in your file:
+Add this marker where you want to insert the component:
 
+```tsx
 
 {/**after*/}
-Then run the command below 👇
+```
+Then run:
 
 ```bash
+
 Boxcn edit
 ```
 Boxcn will:
 
-Prompt you to select a Shadcn component (e.g., Button, Card, Accordion, etc.)
+Prompt you to choose a Shadcn component (e.g., Button, Card, Accordion).
 
-Locate {/**after*/} in your chosen file
+Locate {/**after*/} inside your file.
 
-Automatically insert the component’s JSX code below it
+Automatically insert the JSX for the component below that line.
 
 🪄 Example
 Before:
 
 ```tsx
-
+نسخ الكود
 export default function App() {
   return (
     <div>
@@ -98,10 +90,9 @@ export default function App() {
 After running:
 
 ```bash
-
 Boxcn edit
 ```
-🧩 Select Button
+Select: Button
 
 Result:
 
@@ -116,67 +107,55 @@ export default function App() {
   )
 }
 ```
-💡 Notes
+💡 Notes:
+
 The Boxcn edit command only works if {/**after*/} exists in your file.
 
-Each component is automatically imported and inserted in the correct position.
-
-Works perfectly with any React, Vite, or Next.js project.
+Each added component is automatically imported and positioned correctly.
 
 Default target file: ./src/App.tsx
 
+Works perfectly with React, Vite, or Next.js projects.
+
 🚀 Why It’s Awesome
-Boxcn edit turns Boxcn CLI from a simple installer into a powerful UI assistant.
+Boxcn edit transforms Boxcn CLI from a simple installer into a powerful UI automation assistant.
 It saves time, automates repetitive edits, and keeps your code organized.
 
-Example Command Flow:
+Example Flow:
 
 ```bash
 Boxcn edit
 ```
-✅ Choose a component
+
+✅ Choose a Shadcn component
 ✅ Boxcn finds {/**after*/}
-✅ Component added instantly!
+✅ Component is inserted instantly!
+
+📸 Example Screenshot
 
 
+🤝 Contributing
+Contributions, pull requests, and feedback are welcome 💡
+Help make Boxcn even better for the React developer community!
 
-## 📁 Example Screenshot
+👉 Open an issue
+👉 Submit a pull request
 
-![Boxcn CLI Demo](https://github.com/Khalidabdi1/Boxcn/blob/main/photo/example.png)
+📜 License
+Licensed under the MIT License © Khalid Abdi
 
----
+🌟 Why Developers Love Boxcn
+Boxcn CLI helps developers save time and automate repetitive setup tasks when working with Shadcn/UI components.
+With a single command, you can integrate and import beautiful UI elements seamlessly into your React project.
 
-## 🤝 Contributing
+🔍 SEO Keywords (for better discoverability)
+shadcn ui, boxcn cli, react components, vite, nextjs, ui automation, frontend tools, component installer, shadcn cli, react shadcn, developer productivity, typescript, shadcn generator, ui builder
 
-Want to make Boxcn better?
-Pull requests, issues, and feature suggestions are always welcome 💡
+👨‍💻 Author
+Created with ❤️ by Khalid Abdi
+Follow for more developer tools and open-source projects 🚀
 
-👉 [Open an issue](https://github.com/Khalidabdi1/Boxcn/issues)
-👉 [Submit a pull request](https://github.com/Khalidabdi1/Boxcn/pulls)
 
----
-
-## 📜 License
-
-**MIT License** © [Khalid Abdi](https://github.com/Khalidabdi1)
-
----
-
-## 🌟 Why Boxcn?
-
-> Boxcn CLI was built to help developers save time and automate repetitive setup tasks when working with Shadcn/UI components.
-> With a single command, you can integrate and import UI elements seamlessly.
-
----
-
-## 🔍 SEO Keywords
-
-`shadcn ui`, `cli`, `boxcn`, `react components`, `vite`, `nextjs`, `ui automation`, `frontend tools`, `component installer`, `developer productivity`
-
----
-
-### 💬 Author
-
-Created with ❤️ by [**Khalid Abdi**](https://github.com/Khalidabdi1)
-Follow for more tools and open-source projects 🚀
+![📦 NPM Package](https://www.npmjs.com/package/@khalidabdi/boxcn)
+![⭐ GitHub Repository](https://github.com/Khalidabdi1/Boxcn)
 

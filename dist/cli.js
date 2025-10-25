@@ -25,6 +25,15 @@ async function start() {
             console.log(err);
         }
     }
+    else if (args[0] === "edit") {
+        try {
+            (0, index_1.Edit)();
+        }
+        catch (err) {
+            console.log(chalk_1.default.red("error"));
+            console.log(err);
+        }
+    }
     else {
         console.log(chalk_1.default.red("❌ Unknown command."));
     }

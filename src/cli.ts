@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { main } from "./index";
+import { main ,Edit} from "./index";
 import chalk from "chalk";
 
 
@@ -25,6 +25,17 @@ console.log(chalk.green("============================"))
       console.log(chalk.red("error"))
       console.log(err)
    }
+}else if(args[0]==="edit"){
+   try{
+   Edit()
+
+   }catch(err){
+     console.log(chalk.red("error"))
+
+      console.log(err)
+
+   }
+
 }else{
    console.log(chalk.red("❌ Unknown command."))
 }

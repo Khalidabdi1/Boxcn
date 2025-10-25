@@ -554,19 +554,21 @@ async function Edit() {
         console.log(chalk_1.default.red(`File not found: ${resolvePath}`));
         return;
     }
-    let after = " {/**after*/}";
+    let after = "{/**after*/}";
     const content = fs_1.default.readFileSync(resolvePath, "utf-8");
     if (content.includes(after.trim())) {
         //old
         // const update = importText + "\n" + content
         //new
-        const update = importComponent + "\n" + content;
-        fs_1.default.writeFileSync(resolvePath, update, "utf-8");
+        const updatedContent = content.replace(after, `${after}\n${importComponent}`);
+        // const update = importComponent + "\n" + content
+        fs_1.default.writeFileSync(resolvePath, updatedContent, "utf-8");
         //${component}
         console.log(chalk_1.default.green(`✅  component element  Successfully add`));
     }
     else {
         console.log(chalk_1.default.yellow(`⚠️ component element  existing ${edit}.`));
+        console.log(chalk_1.default.red("don't forget to added {/**after*/}  after where you went to put component element"));
     }
     console.log(chalk_1.default.cyanBright("🎉 Everything was successful!"));
 }

@@ -508,7 +508,7 @@ export async function Edit() {
 
    
 
-    let after = " {/**after*/}"
+    let after = "{/**after*/}"
 
     const content = fs.readFileSync(resolvePath, "utf-8")
 
@@ -517,13 +517,18 @@ export async function Edit() {
         // const update = importText + "\n" + content
         //new
 
-        const update = importComponent + "\n" + content
-        fs.writeFileSync(resolvePath, update, "utf-8")
+      const updatedContent = content.replace(after, `${after}\n${importComponent}`)
+
+
+        // const update = importComponent + "\n" + content
+
+        fs.writeFileSync(resolvePath, updatedContent, "utf-8")
         //${component}
         console.log(chalk.green(`✅  component element  Successfully add`))
 
     } else {
         console.log(chalk.yellow(`⚠️ component element  existing ${edit}.`))
+        console.log(chalk.red("don't forget to added {/**after*/}  after where you went to put component element"))
     }
 
 

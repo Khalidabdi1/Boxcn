@@ -60,6 +60,86 @@ Boxcn will then:
 
 ---
 
+## ✨ New Feature — `Boxcn edit`
+
+Now you can **automatically insert your selected [Shadcn/UI](https://ui.shadcn.com) component element** directly inside your React file — exactly where you want it!
+
+Just place a small comment marker in your file:
+
+```tsx
+{/**after*/}
+Then run the command below 👇
+
+bash
+نسخ الكود
+Boxcn edit
+Boxcn will:
+
+Prompt you to select a Shadcn component (e.g., Button, Card, Accordion, etc.)
+
+Locate {/**after*/} in your chosen file
+
+Automatically insert the component’s JSX code below it
+
+🪄 Example
+Before:
+
+```tsx
+
+export default function App() {
+  return (
+    <div>
+      <h1>Hello</h1>
+      {/**after*/}
+    </div>
+  )
+}
+```
+After running:
+
+```bash
+
+Boxcn edit
+```
+🧩 Select Button
+
+Result:
+
+```tsx
+
+export default function App() {
+  return (
+    <div>
+      <h1>Hello</h1>
+      <Button>Click me</Button>
+    </div>
+  )
+}
+```
+💡 Notes
+The Boxcn edit command only works if {/**after*/} exists in your file.
+
+Each component is automatically imported and inserted in the correct position.
+
+Works perfectly with any React, Vite, or Next.js project.
+
+Default target file: ./src/App.tsx
+
+🚀 Why It’s Awesome
+Boxcn edit turns Boxcn CLI from a simple installer into a powerful UI assistant.
+It saves time, automates repetitive edits, and keeps your code organized.
+
+Example Command Flow:
+
+```bash
+Boxcn edit
+```
+✅ Choose a component
+✅ Boxcn finds {/**after*/}
+✅ Component added instantly!
+
+
+
 ## 📁 Example Screenshot
 
 ![Boxcn CLI Demo](https://github.com/Khalidabdi1/Boxcn/blob/main/photo/example.png)

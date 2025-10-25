@@ -1,4 +1,9 @@
 # 📦 Boxcn CLI — Smart Shadcn/UI Component Installer for React, Vite & Next.js
+![NPM Version](https://img.shields.io/npm/v/@khalidabdi/boxcn)
+![NPM Downloads](https://img.shields.io/npm/dm/@khalidabdi/boxcn)
+![GitHub Stars](https://img.shields.io/github/stars/Khalidabdi1/Boxcn)
+![License](https://img.shields.io/github/license/Khalidabdi1/Boxcn)
+
 
 ![Boxcn CLI Example](https://github.com/Khalidabdi1/Boxcn/blob/main/photo/example.png)
 
@@ -77,7 +82,7 @@ Automatically insert the JSX for the component below that line.
 Before:
 
 ```tsx
-نسخ الكود
+
 export default function App() {
   return (
     <div>
@@ -155,7 +160,5 @@ shadcn ui, boxcn cli, react components, vite, nextjs, ui automation, frontend to
 Created with ❤️ by Khalid Abdi
 Follow for more developer tools and open-source projects 🚀
 
-
-![📦 NPM Package](https://www.npmjs.com/package/@khalidabdi/boxcn)
-![⭐ GitHub Repository](https://github.com/Khalidabdi1/Boxcn)
-
+[📦 NPM Package](https://www.npmjs.com/package/@khalidabdi/boxcn)
+[⭐ GitHub Repository](https://github.com/Khalidabdi1/Boxcn)

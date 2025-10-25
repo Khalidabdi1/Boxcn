@@ -2,7 +2,6 @@
 ![NPM Version](https://img.shields.io/npm/v/@khalidabdi/boxcn)
 ![NPM Downloads](https://img.shields.io/npm/dm/@khalidabdi/boxcn)
 ![GitHub Stars](https://img.shields.io/github/stars/Khalidabdi1/Boxcn)
-![License](https://img.shields.io/github/license/Khalidabdi1/Boxcn)
 
 
 ![Boxcn CLI Example](https://github.com/Khalidabdi1/Boxcn/blob/main/photo/example.png)

@@ -882,6 +882,59 @@ async function Edit() {
   </TooltipContent>
 </Tooltip>`;
     }
+    else if (edit === "Typography h1") {
+        component_name = "Typography h1";
+        importComponent = `<h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">
+      Taxing Laughter: The Joke Tax Chronicles
+    </h1>`;
+    }
+    else if (edit === "Typography h2") {
+        component_name = "Typography h2";
+        importComponent = `<h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+      The People of the Kingdom
+    </h2>`;
+    }
+    else if (edit === "Typography h3") {
+        component_name = "Typography h3";
+        importComponent = `<h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+      The Joke Tax
+    </h3>`;
+    }
+    else if (edit === "Typography h4") {
+        component_name = "Typography h4";
+        importComponent = ` <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+      People stopped telling jokes
+    </h4>`;
+    }
+    else if (edit === "Typography blockquote") {
+        component_name = "Typography blockquote";
+        importComponent = ` <blockquote className="mt-6 border-l-2 pl-6 italic">
+      &quot;After all,&quot; he said, &quot;everyone enjoys a good joke, so
+      it&apos;s only fair that they should pay for the privilege.&quot;
+    </blockquote>`;
+    }
+    else if (edit === "Typography list") {
+        component_name = "Typography list";
+        importComponent = `<ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+      <li>1st level of puns: 5 gold coins</li>
+      <li>2nd level of jokes: 10 gold coins</li>
+      <li>3rd level of one-liners : 20 gold coins</li>
+    </ul>`;
+    }
+    else if (edit === "Typography Inline code") {
+        component_name = "Typography Inline code";
+        importComponent = ` <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
+      @radix-ui/react-alert-dialog
+    </code>`;
+    }
+    else if (edit === "Typography Lead") {
+        component_name = "Typography Lead";
+        importComponent = ` <p className="text-muted-foreground text-xl">
+      A modal dialog that interrupts the user with important content and expects
+      a response.
+    </p>`;
+    }
+    // editList.push("Typography h1","Typography h2","Typography h3","Typography h4","Typography P","Typography blockquote","Typography list","Typography Inline code","Typography Lead")
     const { filePath } = await inquirer_1.default.prompt([
         { type: "input", name: "filePath", message: "Enter the path of the file you want to add the =>import<= to : ", default: "./src/App.tsx" }
     ]);
@@ -896,7 +949,7 @@ async function Edit() {
         //old
         // const update = importText + "\n" + content
         //new
-        const updatedContent = content.replace(after, `${after}\n${importComponent}`);
+        const updatedContent = content.replace(after, `\n${importComponent}`);
         // const update = importComponent + "\n" + content
         fs_1.default.writeFileSync(resolvePath, updatedContent, "utf-8");
         //${component}

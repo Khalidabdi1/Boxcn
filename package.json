@@ -1,5 +1,6 @@
 {
   "name": "@khalidabdi/boxcn",
+  "description": "A smart CLI to install and import Shadcn/UI components into React, Vite, or Next.js projects easily.",
   "version": "1.0.25",
   "main": "src/index.js",
   "types": "dist/index.d.ts",

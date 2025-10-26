@@ -23,7 +23,7 @@
     "automation",
     "developer tools",
     "command line",
-    "shadcn ui installer"
+    "shadcn ui installer" 
   ],
   "scripts": {
     "build": "tsc"
